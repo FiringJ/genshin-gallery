@@ -1,0 +1,12 @@
+CREATE TABLE characters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    image_url TEXT NOT NULL,
+    detail_url TEXT NOT NULL,
+    element VARCHAR(20),
+    rarity INT,
+    region VARCHAR(50),
+    weapon_type VARCHAR(20),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); 
