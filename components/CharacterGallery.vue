@@ -48,7 +48,9 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const characters = ref([])
 const loading = ref(false)
 const error = ref(null)
@@ -93,7 +95,7 @@ const handleImageError = (event) => {
 
 // 处理角色点击
 const handleCharacterClick = (character) => {
-  window.open(character.detailUrl, '_blank')
+  router.push(`/character/${character.id}`)
 }
 
 onMounted(() => {
